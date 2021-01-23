@@ -1,0 +1,22 @@
+{
+  "name": "lab1",
+  "version": "1.0.0",
+  "description": "lab1",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "npm install chalk"
+  },
+  "repository": {
+    "type": "git",
+    "url": "DIG4503-Spring2021-0077"
+  },
+  "keywords": [
+    "lab1"
+  ],
+  "author": "emily",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0"
+  }
+}
