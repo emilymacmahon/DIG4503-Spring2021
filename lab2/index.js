@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Fetch this URL
-axios('https://pokeapi.co/api/v2/pokemon/ditto')
+axios('https://pokeapi.co/api/v2/pokemon/99')
     // And then...
     .then(function (response) {
         // Use the 'data'
@@ -15,3 +15,6 @@ axios('https://pokeapi.co/api/v2/pokemon/ditto')
         // handle error
         console.log("Error: " + error);
     });
+
+    console.log("...");
+    console.log("the code ran");
