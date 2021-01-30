@@ -1,5 +1,5 @@
 {
-  "name": "lab1",
+  "name": "lab2",
   "version": "1.0.0",
   "description": "lab1",
   "main": "index.js",
@@ -12,11 +12,12 @@
     "url": "DIG4503-Spring2021-0077"
   },
   "keywords": [
-    "lab1"
+    "lab2"
   ],
   "author": "emily",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
     "chalk": "^4.1.0"
   }
 }
