@@ -50,6 +50,12 @@ class Fetch {
   }
 
 
+  export {Fetch};
+
+  
+    
+  
+
 /*
 
 keeping for reference in case I mess something up

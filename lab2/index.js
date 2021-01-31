@@ -22,6 +22,17 @@ It should call the fetch() method of the second object.
 
 
 
+
+
+import { Fetch } from './fetch.js';
+
+console.log(Fetch);
+
+
+
+
+
+
 /* 
 realized this should all be inside of Fetch.js
 import axios from 'axios';
@@ -44,5 +55,4 @@ axios('https://pokeapi.co/api/v2/pokemon/99')
 
     */
 
-    console.log("...");
-    console.log("the code ran");
+  
