@@ -18,7 +18,7 @@ If an invalid Pokemon/ID is used, the code should report
 an error using chalk.red().
 
 */
-
+// need to do something with object so the code can run but don't know how to go about
 
 class Fetch {
 
@@ -50,6 +50,7 @@ class Fetch {
   }
 
 
+
   export {Fetch};
 
   
@@ -72,4 +73,14 @@ class Fetch {
   
   }
   
+  */
+
+  /* 
+  experimental code
+  
+  var query=new Fetch("zigzagoon", '#FF00FF')
+query.fetch()
+
+var brokenQuery = new Fetch("zzzzigzagoooon", "#FF00FF")
+brokenQuery.fetch()
   */
