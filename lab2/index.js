@@ -1,3 +1,27 @@
+
+
+/*   
+
+
+Create an index.js file
+
+This should import the Fetch.js file and use the Fetch class.
+
+It should create a new object and pass a valid Pokemon/ID and color.
+
+It should call the fetch() method of the first object.
+
+It should create a second object with an invalid Pokemon/ID.
+
+It should call the fetch() method of the second object.
+
+
+*/
+
+
+
+
+
 import axios from 'axios';
 
 // Fetch this URL
