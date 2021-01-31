@@ -22,6 +22,8 @@ It should call the fetch() method of the second object.
 
 
 
+/* 
+realized this should all be inside of Fetch.js
 import axios from 'axios';
 
 // Fetch this URL
@@ -39,6 +41,8 @@ axios('https://pokeapi.co/api/v2/pokemon/99')
         // handle error
         console.log("Error: " + error);
     });
+
+    */
 
     console.log("...");
     console.log("the code ran");
