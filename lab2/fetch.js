@@ -19,6 +19,8 @@ an error using chalk.red().
 
 */
 // need to do something with object so the code can run but don't know how to go about
+import axios from 'axios';
+import chalk from 'chalk';
 
 class Fetch {
 
@@ -29,16 +31,16 @@ class Fetch {
   
     fetch (){
 
-        axios('https://pokeapi.co/api/v2/pokemon/99')
+        axios('https://pokeapi.co/api/v2/pokemon/' + this.pokemon)
 
         // And then...
-    .then(function (response) {
+    .then(  (response) => {
         // Use the 'data'
         const pokemon = response.data;
 
         // In this example, the above URL will return an object
         //  with data on the Pokemon requested
-        console.log(chalk.hex(('#800080') + "This is a " + pokemon.name + " and its ID is " + pokemon.id));
+        console.log(chalk.hex(this.color)( "This is a " + pokemon.name + " and its ID is " + pokemon.id));
     })
     .catch(function (error) {
         // handle error
@@ -51,7 +53,7 @@ class Fetch {
 
 
 
-  export {Fetch};
+  export default Fetch;
 
   
     

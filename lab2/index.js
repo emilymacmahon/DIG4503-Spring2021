@@ -24,9 +24,14 @@ It should call the fetch() method of the second object.
 
 
 
-import { Fetch } from './fetch.js';
+import Fetch  from './fetch.js';
 
-console.log(Fetch);
+let F = new Fetch ('kingler', '#000000' );
+let G = new Fetch ('jeff', 'red');
+
+
+F.fetch();
+G.fetch();
 
 
 
