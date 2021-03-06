@@ -8,6 +8,7 @@ const BASE_URL = 'https://api.exchangeratesapi.io/latest'
 
 function App() {
   //setting state for the options
+
   const [currencyOptions, setCurrencyOptions] = useState([])
   const [fromCurrency, setFromCurrency] = useState()
   const [toCurrency, setToCurrency] = useState()
@@ -15,6 +16,7 @@ function App() {
   const [amount, setAmount] = useState(1)
   const [amountInFromCurrency, setAmountInFromCurrency] = useState(true)
 
+  // needed so the conversion can be made no matter which field user decides to add input
   let toAmount, fromAmount
   if (amountInFromCurrency) {
     fromAmount = amount
@@ -41,6 +43,7 @@ function App() {
   }, [])
 
   useEffect(() => {
+    // this use effect allows for the conversion to take place and change depending on the selected currency
     // if this is true, the amount we have in the state is the from amount
     if (fromCurrency != null && toCurrency != null) {
       fetch(`${BASE_URL}?base=${fromCurrency}&symbols=${toCurrency}`)
