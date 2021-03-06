@@ -13,6 +13,7 @@ function App() {
   const [fromCurrency, setFromCurrency] = useState()
   const [toCurrency, setToCurrency] = useState()
   const [exchangeRate, setExchangeRate] = useState()
+  // this line has 1 automatically in the field with the to amount calculated
   const [amount, setAmount] = useState(1)
   const [amountInFromCurrency, setAmountInFromCurrency] = useState(true)
 
@@ -34,7 +35,8 @@ function App() {
       .then(data => {
         // ... destructures the array
         //setting default currency with first item in currency array
-        const firstCurrency = Object.keys(data.rates)[0]
+        //26th currency in the array is USD
+        const firstCurrency = Object.keys(data.rates)[26]
         setCurrencyOptions([data.base, ...Object.keys(data.rates)])
         setFromCurrency(data.base)
         setToCurrency(firstCurrency)

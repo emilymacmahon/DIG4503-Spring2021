@@ -9,8 +9,8 @@ export default function CurrencyRow(props) {
     onChangeAmount,
     amount
   } = props
-  return // input type will be a number so the converter can calculate based off the number input
-  (
+  // input type will be a number so the converter can calculate based off the number input
+  return (
     <div>
       <input type="number" className="input" value={amount} onChange={onChangeAmount} />
       <select value={selectedCurrency} onChange={onChangeCurrency}>
