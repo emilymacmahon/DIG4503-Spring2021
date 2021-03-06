@@ -41,6 +41,7 @@ function App() {
   }, [])
 
   useEffect(() => {
+    // if this is true, the amount we have in the state is the from amount
     if (fromCurrency != null && toCurrency != null) {
       fetch(`${BASE_URL}?base=${fromCurrency}&symbols=${toCurrency}`)
         .then(res => res.json())
