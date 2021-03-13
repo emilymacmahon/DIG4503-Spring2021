@@ -36,10 +36,45 @@ const names = [
     'Marcela'
 ];
 
-App.get("/", (req, res) => {
-    res.json(names);
+// A GET route
+// Request parameter of people
+App.get("/people/:person", (req, res) => {
+
+    // Set a default (search failed) result
+    let result = "Not found!";
+
+    // Use the forEach() method of array
+    names.forEach((value) => {
+        
+        if(req.params.person == value) {
+            // If the search worked, save the result
+            result = value;
+        }
+    });
+
+   
+    res.json(result);
 });
 
-App.listen(port, function(){
-        
+App.get("/search/:names", (req, res) => {
+
+    // Set a default (search failed) result
+    let result = "Not found!";
+
+    // Use the forEach() method of array
+    names.forEach((value) => {
+       
+        if(req.params.names == value) {
+            // If the search worked, save the result
+            result = value;
+        }
+    });
+
+   
+    res.json(result);
+});
+
+// Listen on a port.
+App.listen(port, () => {
+    console.log("Server running!");
 });
