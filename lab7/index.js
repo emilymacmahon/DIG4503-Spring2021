@@ -59,14 +59,14 @@ App.get("/people/:person", (req, res) => {
 App.get("/search/:names", (req, res) => {
 
     // Set a default (search failed) result
-    let result = "Not found!";
+    let result_two = "Not found!";
 
     // Use the forEach() method of array
     names.forEach((value) => {
        
         if(req.params.names == value) {
             // If the search worked, save the result
-            result = value;
+            result_two = value;
         }
     });
 
