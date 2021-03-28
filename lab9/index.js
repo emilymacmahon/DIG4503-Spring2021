@@ -1,13 +1,6 @@
-const {MongoClient} = require('mongodb');
+import { MongoClient } from 'mongodb';
 
-async function main() {
-	// we'll add code here soon
-}
 
-/**
- * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
- * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
- */
 const uri = "mongodb+srv://<EmilyMacmahon>:<D3yHGZYqBuJTx6DI>@<mongodb+srv://EmilyMacmahon:D3yHGZYqBuJTx6DI@cluster0.yuzwq.mongodb.net>/test?retryWrites=true&w=majority";
 
 const client = new MongoClient(uri);
