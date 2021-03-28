@@ -1,7 +1,7 @@
 import MongoClient from 'mongodb';
 
  
-
+//keep getting an error saying the URL is not defined??
 const URL = "<mongodb+srv://EmilyMacmahon:D3yHGZYqBuJTx6DI@cluster0.yuzwq.mongodb.net>";
 
 MongoClient.connect(url, { useUnifiedTopology: true })
