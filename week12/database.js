@@ -21,9 +21,13 @@ export default class Database {
         this.collection = this.database.collection("<Collection>");
     }
 
-    createOne(person) {
-        //add to array with push
-        this.arrayExample.push(person);
+   async createOne(person) {
+        //test if null or not
+        //if null, overwrite and used internally
+        if(this.collection != null) {
+            //wait for insertOne meth to finish
+            return await this.collection.insertOne(person);
+        }
     }
 
     readOne(person) {
@@ -39,6 +43,17 @@ export default class Database {
         });
 
         return result;
+    }
+
+    deleteMany(person) {
+        //delete entry by creating an array without it
+        this.arrayExample = this.arrayExample.filter(value =>value != person);
+    }
+
+    close() {
+        if(this.collection != null) {
+            this.collection.close();
+        }
     }
 
     
