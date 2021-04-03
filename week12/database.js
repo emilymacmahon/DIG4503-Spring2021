@@ -1,19 +1,24 @@
-class Database {
+import MongoClient from 'mongodb';
+
+const url= "mongodb+srv://EmilyMacmahon:D3yHGZYqBuJTx6DI@cluster0.yuzwq.mongodb.net"
+
+export default class Database {
     constructor() {
-        this.arrayExample = [
-            'Cortney',
-            'Dewayne',
-            'Trenton',
-            'Pamala',
-            'Ettie',
-            'Errol',
-            'Lorrie',
-            'Hang',
-            'Lauryn',
-            'Caterina',
-            'Isa',
-            'Marcela'
-        ];
+      //set up default value for connection
+      this.connection = null;
+      //setup defauly val for DB
+      this.database = null;
+      //set up default val for collection
+      this.collection = null;
+    }
+
+    async connect() {
+        //wait for connect() meth to finish
+        this.connection = await MongoClient.connect(url, { useUnifiedTopology: true });
+        //select db
+        this.database = this.connection.db("<Database>");
+        //select collection
+        this.collection = this.database.collection("<Collection>");
     }
 
     createOne(person) {

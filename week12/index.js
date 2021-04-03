@@ -6,7 +6,6 @@ const port = 45030;
 
 const d = new Database();
 
-
 //create
 App.put("/people/:person", (req, res) => {
     //save req parameter
