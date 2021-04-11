@@ -1,5 +1,5 @@
 import Express from 'express';
-import Database from './Database';
+import Database from './Database.js';
 
 const App = Express();
 const port = 45030;
@@ -7,8 +7,9 @@ const port = 45030;
 //translate request to JSON
 App.use(Express.json());
 
-
 //db
+const db = new Database();
+db.connect("lab11", "EmilyMacmahon");
 
 App.put("/books/:isbn", (req, res) => {
     const isbn = req.params.isbn;
@@ -49,7 +50,9 @@ App.patch("/books/:isbn", (req, res) => {
 App.delete("/books/:isbn", (req, res) => {
     const isbn = req.params.isbn;
 
-    res.json({"deleted": 0});
+    const result = await db.deleteOne(isbn);
+
+    res.json(result);
 
 });
 
