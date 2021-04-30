@@ -1,4 +1,4 @@
-const express = require('express');
+import Express from 'express';
 const cors = require('cors');
 require('dotenv').config();
 
@@ -10,6 +10,8 @@ const port= 45030;
 
 app.use(cors());
 app.use(express.json());
+
+app.get()
 
 app.listen(port, () => {
     console.log("Server is running");
