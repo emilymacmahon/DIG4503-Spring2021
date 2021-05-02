@@ -1,5 +1,6 @@
 // Import Express
 import Express from 'express';
+import Database from './Database.js';
 
 //trying to get the files to talk to each other?
 import './App.js'
@@ -10,6 +11,9 @@ import CORS from 'cors';
 const App = Express();
 // Store a port number
 const port = 45030;
+
+const db = new Database();
+// db.connect("lab11", "EmilyMacmahon");
 
 App.use(CORS());
 
