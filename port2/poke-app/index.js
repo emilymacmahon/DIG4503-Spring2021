@@ -13,26 +13,31 @@ const App = Express();
 const port = 45030;
 
 const db = new Database();
-// db.connect("lab11", "EmilyMacmahon");
+db.connect("portfolio2", "EmilyMacmahon");
 
 App.use(CORS());
 
 // Create
-App.put();
+// PUT -> d.createOne() -> collection.insertOne()
+App.put("/path/:parameter", (req, res) => {});
 
 // Read
-App.get();
+// GET -> d.readOne() -> collection.findOne()
+App.get("/path/:parameter", (req, res) => {});
 
 // Update
-App.patch();
+// POST -> One or more database methods
+App.post("/path/controller", (req, res) => {});
 
-// Delete
-App.delete();
+// PATCH -> d.updateOne() -> collection.updateOne()
+App.patch("/", (req, res) => {});
 
-// Listen (and start server)
-App.listen(port, () => {
-    console.log("Server running!");
-});
+// DELETE -> d.deleteOne() -> collection.deleteOne()
+App.delete("/", (req, res) => {});
+
+// Listen on the port for HTTP communication
+App.listen(port);
 
 
 export default App;
+
