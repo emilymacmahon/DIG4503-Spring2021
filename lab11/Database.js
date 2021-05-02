@@ -33,7 +33,7 @@ class Database {
     }
     async deleteOne(isbn){
         if(this.collection != null) {
-            const result = await this.collection.deleteOne({"isbn": isbn});
+            const result = await this.collection.deleteOne({});
             return {"deleted": result.deltedCount};
         } else {
             return{"deleted": 0};

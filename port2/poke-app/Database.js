@@ -30,6 +30,14 @@ const URL = "mongodb+srv://EmilyMacmahon:D3yHGZYqBuJTx6DI@cluster0.yuzwq.mongodb
     console.log("Error: " + error);
 }); */
 
+MongoClient.connect(URL, { useUnifiedTopology: true })
+.then(connection => {
+    // Select the database.
+    let database = connection.db("portfolio2");
+    
+    // Select the collection.
+    let collection = database.collection("EmilyMacmahon");
+
 class Database {
     constructor() {
         // Setup a default value for connection
