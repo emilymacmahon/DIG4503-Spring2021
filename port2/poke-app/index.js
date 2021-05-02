@@ -18,6 +18,8 @@ async function databaseFunctionality() {
 await db.connect("portfolio2", "EmilyMacmahon");
 //await
 await db.create({updatedField: "value"});
+await db.readOne({updatedField: "value"});
+    //console.log(document);
 await db.update({updatedField: "aother value"}, {updatedField: "new"});
 await db.delete({updatedField: "another value delted"});
 db.close();
