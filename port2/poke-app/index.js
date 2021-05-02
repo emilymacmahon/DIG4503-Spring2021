@@ -1,10 +1,17 @@
 // Import Express
 import Express from 'express';
 
+//trying to get the files to talk to each other?
+import './App.js'
+import CORS from 'cors';
+
+
 // Create an instance of Express
 const App = Express();
 // Store a port number
 const port = 45030;
+
+App.use(CORS());
 
 // Create
 App.put();
