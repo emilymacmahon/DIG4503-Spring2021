@@ -13,7 +13,11 @@ const App = Express();
 const port = 45030;
 
 const db = new Database();
+
+async function databaseFunctionality() {
 db.connect("portfolio2", "EmilyMacmahon");
+//await
+}
 
 App.use(CORS());
 
