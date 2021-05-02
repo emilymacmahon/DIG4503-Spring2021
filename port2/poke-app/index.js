@@ -15,32 +15,12 @@ const port = 45030;
 const db = new Database();
 
 async function databaseFunctionality() {
-db.connect("portfolio2", "EmilyMacmahon");
+await db.connect("portfolio2", "EmilyMacmahon");
 //await
+db.close();
+
 }
 
-App.use(CORS());
-
-// Create
-// PUT -> d.createOne() -> collection.insertOne()
-App.put("/path/:parameter", (req, res) => {});
-
-// Read
-// GET -> d.readOne() -> collection.findOne()
-App.get("/path/:parameter", (req, res) => {});
-
-// Update
-// POST -> One or more database methods
-App.post("/path/controller", (req, res) => {});
-
-// PATCH -> d.updateOne() -> collection.updateOne()
-App.patch("/", (req, res) => {});
-
-// DELETE -> d.deleteOne() -> collection.deleteOne()
-App.delete("/", (req, res) => {});
-
-// Listen on the port for HTTP communication
-App.listen(port);
 
 
 export default App;
