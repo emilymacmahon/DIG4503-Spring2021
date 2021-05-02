@@ -2,7 +2,7 @@ import MongoClient from 'mongodb';
 
 const URL = "mongodb+srv://EmilyMacmahon:D3yHGZYqBuJTx6DI@cluster0.yuzwq.mongodb.net";
 
-MongoClient.connect(URL, { useUnifiedTopology: true })
+/* MongoClient.connect(URL, { useUnifiedTopology: true })
 .then(connection => {
     // Select the database.
     let database = connection.db("portfolio2");
@@ -28,6 +28,31 @@ MongoClient.connect(URL, { useUnifiedTopology: true })
 .catch(error => {
     // Connection failed for any number of reasons.
     console.log("Error: " + error);
-});
+}); */
 
-    export default Database;
+class Database {
+    constructor() {
+        // Setup a default value for connection
+        this.connection = null;
+        // Setup a default value for database
+        this.database = null;
+        // Setup a default value for collection
+        this.collection = null;
+    }
+    async connect() {
+        // Wait for the connect() method to finish.
+        this.connection = await MongoClient.connect(url, { useUnifiedTopology: true });
+        // Select a database.
+        this.database = this.connection.db("<Database>");
+        // Select a collection.
+        this.collection = this.database.collection("<Collection>");
+}
+    close() {
+        if(this.connection != null) {
+        this.collection.close();
+        }
+    }
+}
+
+export default Database;
+

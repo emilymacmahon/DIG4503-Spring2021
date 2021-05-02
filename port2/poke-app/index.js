@@ -2,7 +2,7 @@
 import Express from 'express';
 import Database from './Database.js';
 
-//trying to get the files to talk to each other?
+//trying to get the files to talk to each other? when I run the start script it still tries to open on port 3000, the default one
 import './App.js'
 import CORS from 'cors';
 
