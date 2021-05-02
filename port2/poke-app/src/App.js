@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import Axios from 'axios';
 import './App.css';
+import './index.js';
 
 function App() {
   const [pokemonName, setPokemonName] =useState("");
