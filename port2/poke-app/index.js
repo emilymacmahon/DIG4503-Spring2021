@@ -6,14 +6,22 @@ const App = Express();
 // Store a port number
 const port = 45030;
 
-// Setup a route
-App.get('/', function(request, response) {
-    response.send("Hi!");
-});
+// Create
+App.put();
+
+// Read
+App.get();
+
+// Update
+App.patch();
+
+// Delete
+App.delete();
 
 // Listen (and start server)
-App.listen(port, function(){
+App.listen(port, () => {
     console.log("Server running!");
 });
+
 
 export default App;
